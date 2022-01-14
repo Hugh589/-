@@ -13,15 +13,15 @@ from email.header import Header
 
 def sendmail(path):
     mail_host = "smtp.qq.com"
-    mail_sender = "826270399@qq.com"
-    mail_license = "egqeyasefwkpbajg"
-    mail_receiver = "duyz19@lzu.edu.cn"
+    mail_sender = "xxxxxxxxxxx@qq.com"
+    mail_license = "xxxxxxxxxxxx"
+    mail_receiver = "xxxxxx@lzu.edu.cn"
 
     mm = MIMEMultipart('related')
 
     content = "自动打卡结果通知"
-    mm["From"] = "sender_name<826270399@qq.com>"
-    mm["To"] = "receiver_name<duyz19@lzu.edu.cn>"
+    mm["From"] = "sender_name<xxxxxxxx@qq.com>"
+    mm["To"] = "receiver_name<xxxxxx@lzu.edu.cn>"
     mm["Subject"] = Header(content,'utf-8')
 
     body_content = "今日打卡结果已到，请查收！"
@@ -49,8 +49,8 @@ drive.get('http://my.lzu.edu.cn/main')
 drive.maximize_window()
 
 #登录
-drive.find_element_by_id('username').send_keys('320190900081')
-drive.find_element_by_id('password').send_keys('dyz001118!')
+drive.find_element_by_id('username').send_keys('xxxxxxxxxxx')
+drive.find_element_by_id('password').send_keys('xxxxxxxxx')
 drive.find_element_by_xpath('/html/body/div/div[2]/div[2]/div/form/div[4]/button').click()
 
 #进入打卡页面，进行打卡
@@ -67,7 +67,7 @@ im = pyscreenshot.grab(bbox=(1420,150,1920,1080))
 year = datetime.datetime.now().year
 month = datetime.datetime.now().month
 day = datetime.datetime.now().day
-save_path = 'E:\Code\Code_Python\daka\screenshot'
+save_path = 'xxxxxxxxxxx'
 im.save(save_path+'\\'+str(year)+'-'+str(month)+'-'+str(day)+'.png')
 im_path = save_path+'\\'+str(year)+'-'+str(month)+'-'+str(day)+'.png'
 time.sleep(3)
